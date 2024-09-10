@@ -78,7 +78,7 @@ subject2category = {
 class MMLUEval(Eval):
     def __init__(self, num_examples: int | None = None):
         df = pandas.read_csv(
-            bf.BlobFile("https://openaipublic.blob.core.windows.net/simple-evals/mmlu.csv")
+            "mmlu.csv"
         )
         examples = [row.to_dict() for _, row in df.iterrows()]
         if num_examples:
